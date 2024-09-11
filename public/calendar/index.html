@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Timetablize</title>
+		<link rel="stylesheet" href="index.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+		<script type="module" src="main.js"></script>
+	</head>
+	<body>
+		<nav></nav>
+		<div id="tooltip">
+			<h1>test</h1>
+			<p>wowowowow</p>
+		</div>
+		<dialog id="create-period-dialog">
+			<h1>Add new period</h1>
+			<input id="create-period-class-name" placeholder="Class Name" type="text">
+			<div id="create-period-times">
+				<label for="create-period-start-time">Start Time</label>
+				<input id="create-period-start-time" type="time">
+				<label for="create-period-end-time">End Time</label>
+				<input id="create-period-end-time" type="time">
+			</div>
+			<div id="create-period-week-repeats">
+				<div>
+					<input data-weekday="0" type="checkbox">
+					<label>Sun</label>
+				</div>
+				<div>
+					<input data-weekday="1" type="checkbox">
+					<label>Mon</label>
+				</div>
+				<div>
+					<input data-weekday="2" type="checkbox">
+					<label>Tue</label>
+				</div>
+				<div>
+					<input data-weekday="3" type="checkbox">
+					<label>Wed</label>
+				</div>
+				<div>
+					<input data-weekday="4" type="checkbox">
+					<label>Thu</label>
+				</div>
+				<div>
+					<input data-weekday="5" type="checkbox">
+					<label>Fri</label>
+				</div>
+				<div>
+					<input data-weekday="6" type="checkbox">
+					<label>Sat</label>
+				</div>
+			</div>
+			<label for="create-period-color">Color</label>
+			<input id="create-period-color" type="color" value="#7AC56E">
+			<input id="create-period-button" type="button" value="Add new period">
+		</dialog>
+		
+		<div id="current-period-wrapper">
+			<p class="big-text">Hello <span id="welcome-text" class="loading">placeholder</span>,</p>
+			<div class="loading" id="current-period">
+				<p>You are currently in</p>
+				<p id="current-period-text" class="no-margin-top huge-text">Placeholder</p>
+				<p id="current-period-time-remaining" class="no-margin-top ">Ends in 39:41 at 12:03PM</p>
+			</div>
+			<hr>
+			<div class="loading" id="next-period">
+				<p>Next period is</p>
+				<p id="next-period-text" class="no-margin-top big-text">Placeholder</p>
+				<p id="next-period-time-remaining" class="no-margin-top ">Starts in 39:41 at 12:03PM</p>
+			</div>
+		</div>
+		
+		<div id="date-and-time-info">
+			<p class="big-text current-time">22:10</p>
+			<p class="no-margin-top gray current-date">Tuesday, August 6</p>
+			
+		</div>
+
+		<div id="schedule">
+			<div id="schedule-title">
+				<p class="big-text">Schedule</p>
+				<div id="schedule-buttons">
+					<p>></p>
+					<input id="create-period-modal-show-button" value="Add new period" type="button">
+				</div>
+				
+			</div>
+			<div class="loading" id="schedule-wrapper">
+				<div id="schedule-time">
+					<p>12:00 AM -</p>
+					<p>12:30 AM -</p>
+					<p>1:00 AM -</p>
+					<p>1:30 AM -</p>
+					<p>2:00 AM -</p>
+					<p>2:30 AM -</p>
+					<p>3:00 AM -</p>
+					<p>3:30 AM -</p>
+					<p>4:00 AM -</p>
+					<p>4:30 AM -</p>
+					<p>5:00 AM -</p>
+					<p>5:30 AM -</p>
+					<p>6:00 AM -</p>
+					<p>6:30 AM -</p>
+					<p>7:00 AM -</p>
+					<p>7:30 AM -</p>
+					<p>8:00 AM -</p>
+					<p>8:30 AM -</p>
+					<p>9:00 AM -</p>
+					<p>9:30 AM -</p>
+					<p>10:00 AM -</p>
+					<p>10:30 AM -</p>
+					<p>11:00 AM -</p>
+					<p>11:30 AM -</p>
+					<p>12:00 PM -</p>
+					<p>12:30 PM -</p>
+					<p>1:00 PM -</p>
+					<p>1:30 PM -</p>
+					<p>2:00 PM -</p>
+					<p>2:30 PM -</p>
+					<p>3:00 PM -</p>
+					<p>3:30 PM -</p>
+					<p>4:00 PM -</p>
+					<p>4:30 PM -</p>
+					<p>5:00 PM -</p>
+					<p>5:30 PM -</p>
+					<p>6:00 PM -</p>
+					<p>6:30 PM -</p>
+					<p>7:00 PM -</p>
+					<p>7:30 PM -</p>
+					<p>8:00 PM -</p>
+					<p>8:30 PM -</p>
+					<p>9:00 PM -</p>
+					<p>9:30 PM -</p>
+					<p>10:00 PM -</p>
+					<p>10:30 PM -</p>
+					<p>11:00 PM -</p>
+					<p>11:30 PM -</p>
+				</div>
+				<div id="schedule-periods">
+					<hr id="current-time-line">
+				</div>
+			</div>
+		</div>
+		<script type="module" src="time.js"></script>
+		<script type="module" src="tooltip.js"></script>
+	</body>
+</html>

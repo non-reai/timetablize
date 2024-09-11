@@ -1,0 +1,92 @@
+html {
+	height: 90%;
+}
+
+body {
+	display: grid;
+	grid-template-areas: 
+		"nav nav nav"
+		". title . "
+		". input-fields . "
+		;
+	grid-template-rows: 5% 25% 50%;
+	grid-template-columns: 30px calc(100% - 60px) 30px;
+	justify-content: center;
+	/* padding: 5%; */
+	height: 100%;
+	margin: 0;
+	/* background-color: #D9D9D9; */
+}
+
+nav {
+	grid-area: nav;
+	background-color: #e65b5b;
+	/* height: 10%; */
+}
+
+#title {
+	grid-area: title;
+}
+
+h1 {
+	font-size: 3rem;
+	margin-bottom: 0;
+}
+
+#sign-up {
+	background-color: #ebebeb;
+	border-radius: 5px;
+}
+
+#sign-in {
+	background-color: #ebebeb;
+	border-radius: 5px;
+}
+
+#wrapper {
+	grid-area: input-fields;
+	width: 100%;
+	display: flex;
+}
+
+#wrapper > div {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	padding: 10px;
+	margin-right: 30px;
+	border-bottom: solid #e65b5b 3px;
+}
+
+#wrapper > div:nth-child(2) {
+	margin-right: 0;
+}
+
+/* #wrapper > div > h2 {
+	background-color: #ea2e2e;
+	padding: 10px;
+	border-radius: 5px;
+} */
+
+#wrapper > div > input {
+	margin-top: 10px;
+}
+
+input {
+	border: none;
+	padding: 5px;
+	border-radius: 5px;
+	font-size: 1.5rem;
+	/* height: 15%; */
+}
+
+input[type="button"] {
+	background-color: #e65b5b;
+	font-size: 2rem;
+	flex-grow: 1;
+}
+
+* {
+	font-family: Inter;
+	transition: filter 0.5s;
+}
